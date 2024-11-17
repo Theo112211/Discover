@@ -46,7 +46,7 @@ body {
 .sidepanel {
     scroll-snap-align: center;
     background: linear-gradient(45deg, black, rgb(31, 31, 31));
-    background: url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background: url('https://images.pexels.com/photos/3695799/pexels-photo-3695799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
         background-position: center;
         background-size: cover;
         background-blend-mode:overlay;
