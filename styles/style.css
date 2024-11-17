@@ -1,0 +1,126 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: url('/imgs/img2.jpg');
+    background-size: cover;
+    /* background-position:; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: pulse 22s ease-in-out alternate infinite;
+}
+
+@keyframes pulse {
+    to {
+        background-position: center;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    height: max-content;
+    background: linear-gradient(45deg, rgb(0, 0, 0), transparent);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.601);
+    padding-block: 40px;
+    padding-inline: 120px;
+    transition: all .2s ease-in-out;
+}
+
+.diag button {
+    background: rgb(255, 0, 43);
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.163);
+
+}
+
+p button:hover {
+    background: cyan;
+    color: rgb(0, 13, 65);
+}
+
+.diag {
+    border: none;
+    outline: none;
+    background: rgb(31, 31, 31);
+    color: white;
+}
+
+.diag input {
+    border: none;
+    outline: none;
+}
+
+.submit:active {
+    background: cyan;
+}
+
+.submit:hover {
+    background: rgb(25, 25, 253);
+}
+
+.close:hover {
+    background: rgb(172, 0, 0);
+}
+
+button {
+    transition: all .3s ease-in;
+    cursor: pointer;
+    background: rgb(25, 25, 253);
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.163);
+}
+
+fieldset input,
+.country {
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.502);
+    color: greenyellow;
+    padding: 10px;
+}
+
+fieldset legend {
+    color: greenyellow;
+}
+
+.country {
+    width: clamp(120px, 25vw, 400px);
+}
+
+fieldset {
+    border-radius: 6px;
+    border: 1px solid greenyellow;
+}
+
+fieldset a {
+    text-decoration: none;
+    color: greenyellow;
+    margin-left: 10px;
+}
+
+.SignIn {
+    background: greenyellow;
+    color: black;
+}
+
+.SignIn:hover {
+    background: rgb(0, 139, 37);
+    color: white;
+}

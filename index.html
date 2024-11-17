@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <p>
+            <button onclick="document.querySelector('.diag').showModal();">Show</button>
+            <dialog class="diag" showModal>
+                <input type="text" placeholder="Email here">
+                <button class="submit" onclick="document.querySelector('.diag').close();">Submit</button>
+                <button class="close" onclick="document.querySelector('.diag').close();">Close</button>
+            </dialog>
+
+        </p>
+
+        <p>
+            <input class="country" type="text" list="data" placeholder="Choose Your Country.">
+
+            <datalist id="data">
+                <option>Ghana</option>
+                <option>USA</option>
+                <option>South Africa</option>
+                <option>Mali</option>
+                <option>Ukraine</option>
+            </datalist>
+        </p>
+
+
+        <details>
+            <summary>How to get QR code?</summary>
+            Follow these steps:
+            <ul style="list-style:circle;">
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus blanditiis quam dicta praesentium
+                    necessitatibus ipsam maiores repudiandae sequi repellat, soluta aspernatur excepturi id alias
+                    facilis.
+                </li>
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus blanditiis quam dicta praesentium
+                    necessitatibus ipsam maiores repudiandae sequi repellat, soluta aspernatur excepturi id alias
+                    facilis.
+                </li>
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus blanditiis quam dicta praesentium
+                    necessitatibus ipsam maiores repudiandae sequi repellat, soluta aspernatur excepturi id alias
+                    facilis.
+                </li>
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus blanditiis quam dicta praesentium
+                    necessitatibus ipsam maiores repudiandae sequi repellat, soluta aspernatur excepturi id alias
+                    facilis.
+                </li>
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus blanditiis quam dicta praesentium
+                    necessitatibus ipsam maiores repudiandae sequi repellat, soluta aspernatur excepturi id alias
+                    facilis.
+                </li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>For developers</summary>
+            Enter the following code.
+            <pre>
+            get   ready   to    be    amazed!!!
+
+        </pre>
+        </details>
+
+        <p>
+        <fieldset>
+            <legend>
+                <ruby>Sign In
+                    <rt>For Admins</rt>
+                    <rp>For Admins</rp>
+                </ruby>
+            </legend>
+            <input type="text" placeholder="ID here">
+            <p></p>
+            <input type="password" placeholder="Password here">
+            <p></p> <button class="SignIn">Sign In</button>
+            <a href="home.html">Skip</a>
+        </fieldset>
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: rgb(35, 35, 35);
+    scroll-behavior: smooth;
+    overflow: hidden;
+    scroll-snap-type: proximity;
+}
+
+.wrapper {
+        scroll-behavior: smooth;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: grid;
+    margin-left: auto;
+    width: 75%;
+    columns: 300px;
+    height: 100vh;
+    overflow-y: scroll;
+    /* background:linear-gradient(45deg,rgb(172, 255, 47),black,rgb(16, 39, 0),greenyellow); */
+    background: url('/bg1.jpg');
+    background-position: center;
+    background-size: cover;
+    animation: fadeout 70s ease-in-out infinite alternate;
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+}
+
+@keyframes fadeout {
+    40% {
+        /* background: transparent; */
+        background-position: right;
+    }
+
+    80%{
+        background-position: left;
+    }
+}
+
+.sidepanel {
+    scroll-snap-align: center;
+    background: linear-gradient(45deg, black, rgb(31, 31, 31));
+    background: url('/bg1.jpg');
+        background-position: center;
+        background-size: cover;
+        background-blend-mode:overlay;
+        animation: fadeout 70s ease-in-out infinite alternate;
+    height: 100vw;
+    width: 25%;
+    color: greenyellow;
+    box-shadow: 0px 0px 2px greenyellow;
+    z-index: 1;
+    border-right: 1px solid greenyellow;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.head {
+    margin-block: 35px;
+}
+
+.profile {
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+    border-radius: 8px;
+    width: 90%;
+}
+
+details {
+    margin-top: 60px;
+    max-width: 100%;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    background: black;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+details:hover {
+    background: rgba(0, 0, 0, 0.171);
+    padding: 10px;
+    border-radius: 6px;
+        box-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+
+.sBtn {
+    background: linear-gradient(45deg, black, rgb(10, 10, 10));
+    width: 120px;
+    color: greenyellow;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+
+.sBtn:hover {
+    color: black;
+    background: greenyellow;
+    box-shadow: 0px 0px 8px greenyellow;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.sponsor {
+    position: relative;
+    color: black;
+    background: greenyellow;
+    box-shadow: 0px 0px 8px greenyellow;
+    width: 180px;
+    margin-top: auto;
+    margin-bottom: 70px;
+    font-weight: 600;
+    position: fixed;
+    left: clamp(10px, 1vw, 50px);
+    bottom: 70px;
+
+}
+
+.sponsor:hover {
+    transform: translateY(-5px);
+    background: gold;
+    box-shadow: 0px 0px 18px gold;
+    color: rgb(0, 0, 0);
+    transition: all .5s ease-in;
+}
+
+.toTop {
+    background: greenyellow;
+    position: fixed;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    right: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    border-radius: 5px;
+    opacity: 0;
+    animation: popIn 4s ease-in forwards;
+    z-index: 2;
+}
+
+.toTop:hover {
+    color: greenyellow;
+    background: black;
+    box-shadow: 0px 0px 4px greenyellow;
+    transition: all .3s ease-in-out;
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+    }
+}
+
+nav {
+    padding-inline: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background: linear-gradient(45deg, black, rgb(23, 23, 23));
+    color: white;
+}
+
+.menu {
+    font-size: clamp(10px, 2vw, 17px);
+    display: flex;
+    gap: 20px;
+}
+
+.menulinks {
+    list-style: none;
+
+}
+
+.menulinks a {
+    text-decoration: none;
+    color: white;
+}
+
+.menulinks a:hover {
+    padding-bottom: 4px;
+    transition: all .3s;
+    box-shadow: 0px 6px 4px rgba(102, 255, 0, 0.356);
+}
+
+.menulinks a:active {
+    border-bottom: 1px solid greenyellow;
+}
+
+.menulinks:last-child a {
+    background: greenyellow;
+    color: black;
+    padding: 2px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.menulinks:last-child a:hover {
+    transition: all .3s;
+    box-shadow: 0px 0px 4px rgb(102, 255, 0);
+}
+
+
+img {
+    width: 100%;
+    border-radius: 2px;
+    transition: .3s ease-in-out;
+    scroll-snap-align: center;
+}
+
+img:hover {
+    box-shadow: 1px 0px 8px greenyellow;
+    outline: 1px solid greenyellow;
+    cursor: pointer;
+}
+
+.grid {
+    padding: 10px;
+    grid-column: span 2;
+    /* background: linear-gradient(greenyellow,black); */
+    gap: 5px;
+    columns: 160px;
+    scroll-snap-type: proximity;
+}
+
+.brick {
+    scroll-snap-align:center;
+    transform-style: preserve-3d;
+    transform: scale(.9);
+    opacity: .1;
+    animation: fadein forwards;
+    animation-timeline: view();
+    animation-range: entry 10px;
+}
+
+@keyframes fadein {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(greenyellow, green);
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgb(85, 255, 0);
+}
+
+/* 
+::-webkit-scrollbar-track{
+    background: greenyellow;
+} */
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: black;
+}
+
+.showcase {
+    margin-inline: auto;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* height: clamp(600px,60vh,800px);
+    width: 50%; */
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.76), rgb(29, 29, 29));
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    visibility: hidden;
+    opacity: 0;
+    gap: 5px;
+    transition: all .4s ease-in-out;
+}
+
+.close {
+    background: rgb(255, 0, 43);
+    color: white;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    z-index: 2;
+    padding: 6px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.163);
+    cursor: pointer;
+}
+
+.close:hover {
+    border: 1px solid rgb(255, 0, 0);
+    box-shadow: 0px 0px 10px red;
+    transition: .2s ease-in-out;
+}
+
+.download {
+    border: 1px solid greenyellow;
+    color: rgb(0, 0, 0);
+    background: greenyellow;
+    box-shadow: 0px 0px 4px greenyellow;
+}
+
+.download:hover {
+    border: 1px solid greenyellow;
+    color: greenyellow;
+    background: black;
+    box-shadow: 0px 0px 4px greenyellow;
+}
+
+.selected {
+    width: clamp(300px, 60vw, 400px);
+    padding: 0;
+    margin: 0;
+}
+
+.selected:hover {
+    box-shadow: 0px 0px 0px;
+    scale: 1.1;
+}
+
+
+.menulinks ruby rt {
+    display: none;
+    visibility: hidden;
+}
+
+@media (width<=500px) {
+    .sidepanel {
+        width: 8%;
+        overflow-x:hidden;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+    
+    .sidepanel h2{
+      visibility: hidden;
+    }
+    
+    .sidepanel:hover{
+      width: 50%;
+      transition: .3s ease-in-out;
+    }
+    
+    .sidepanel:hover h2{
+      visibility: visible;
+    }
+    
+
+    .wrapper {
+        width: 95%;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 10px;
+        top: 50px;
+        z-index: 2;
+        box-shadow: 0px 2px 8px black;
+        background: linear-gradient(45deg, rgba(26, 26, 26, 0.205), rgba(0, 0, 0, 0.527));
+        padding: 20px;
+        border-radius: 20%;
+        /* backdrop-filter: blur(2px); */
+        height: 10px;
+        width: 60px;
+        overflow: hidden;
+    }
+
+    .menulinks {
+        font-size: larger;
+    }
+
+    .menu:hover {
+        border-radius: 0%;
+        height: max-content;
+        background: linear-gradient(45deg, rgb(26, 26, 26), black);
+    }
+
+    .menulinks ruby rt {
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .menu:hover .menulinks ruby rt {
+        rotate: 180deg;
+        transition: all .5s ease-in-out;
+    }
+
+    .menu:active .menulinks ruby rt {
+        rotate: 180deg;
+        transition: all .5s ease-in-out;
+    }
+
+    #nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .toTop {
+        transform: translateY(-20px);
+    }
+}
