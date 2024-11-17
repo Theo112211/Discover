@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url(https://images.unsplash.com/photo-1542382257-80dedb725088?q=80&w=1828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     scroll-behavior: smooth;
     overflow: hidden;
     scroll-snap-type: proximity;
@@ -45,7 +45,7 @@ body {
 .sidepanel {
     scroll-snap-align: center;
     background: linear-gradient(45deg, black, rgb(31, 31, 31));
-    background: url('https://images.unsplash.com/photo-1542382257-80dedb725088?q=80&w=1828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
         background-position: center;
         background-size: cover;
         background-blend-mode:overlay;
