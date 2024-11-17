@@ -6,6 +6,7 @@
 
 body {
     background: url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size:cover;
     scroll-behavior: smooth;
     overflow: hidden;
     scroll-snap-type: proximity;
